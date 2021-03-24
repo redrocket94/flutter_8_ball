@@ -12,15 +12,15 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        debugShowCheckedModeBanner: false,
-        home: MyHomePage(title: '8 Ball App'),
+      debugShowCheckedModeBanner: false,
+      home: MyHomePage(title: '8 Ball App'),
     );
   }
 }
 
 class MyHomePage extends StatefulWidget {
   MyHomePage({String title});
-  final String url = "https://adapt-8ball-project.web.app/";
+  final String url = "http://192.168.86.20:3000/adapt-proj-frontend";
 
   @override
   _MyHomePageState createState() => _MyHomePageState();
@@ -33,6 +33,7 @@ class _MyHomePageState extends State<MyHomePage> {
     // Enable hybrid composition.
     if (Platform.isAndroid) WebView.platform = SurfaceAndroidWebView();
   }
+
   @override
   Widget build(BuildContext context) {
     return WillPopScope(
